@@ -1,13 +1,13 @@
 import './App.css';
-import Counter from './components/Counter';
 import Todos from './components/Todos';
+import CounterContainer from './containers/CounterContainer';
 
 const App = () => {
   return (
     <div>
-      <Counter number={0} onIncrease={(() => null)} onDecrease={(() => null)}/>
+      <CounterContainer/>
       <hr />
-      <Todos input={null} todos={{}} onChangeInput={(() => null)} onInsert={(() => null)} onToggle={(() => null)} onRemove={(() => null)} />
+      <Todos />
     </div>
   );
 }

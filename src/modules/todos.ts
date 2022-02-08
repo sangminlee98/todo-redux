@@ -76,6 +76,8 @@ const todos = (state = initialState, action: Action) => {
         ...state,
         todos: state.todos.filter(todo => todo.id !== action.id)
       }
+    default:
+      return state;
   }
 }
 export default todos;

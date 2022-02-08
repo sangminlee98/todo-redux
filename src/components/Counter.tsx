@@ -3,7 +3,7 @@ import React from 'react';
 type Props = {
   number: number,
   onIncrease: () => void,
-  onDecrease: () => void,
+  onDecrease: () => void
 }
 const Counter = ({number, onIncrease, onDecrease}: Props) => {
   return (

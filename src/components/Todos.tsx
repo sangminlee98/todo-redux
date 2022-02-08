@@ -1,17 +1,17 @@
 import React from 'react';
 
 type TodoItemProps = {
-  todo: {},
-  onToggle: () => void,
-  onRemove: () => void,
-}
+  todo?: {},
+  onToggle?: () => void,
+  onRemove?: () => void,
+};
 type TodoProps = {
-  input: null,
-  todos: {},
-  onChangeInput: () => void,
-  onInsert: () => void,
-  onToggle: () => void,
-  onRemove: () => void,
+  input?: null,
+  todos?: {},
+  onChangeInput?: () => void,
+  onInsert?: () => void,
+  onToggle?: () => void,
+  onRemove?: () => void,
 }
 
 const TodoItem = ({todo, onToggle, onRemove}: TodoItemProps) => {
@@ -41,11 +41,11 @@ const Todos = ({
         <button type='submit'>등록</button>
       </form>
       <div>
-        <TodoItem todo={todos} onToggle={onToggle} onRemove={onRemove}/>
-        <TodoItem todo={todos} onToggle={onToggle} onRemove={onRemove}/>
-        <TodoItem todo={todos} onToggle={onToggle} onRemove={onRemove}/>
-        <TodoItem todo={todos} onToggle={onToggle} onRemove={onRemove}/>
-        <TodoItem todo={todos} onToggle={onToggle} onRemove={onRemove}/>
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
       </div>
     </div>
   );
