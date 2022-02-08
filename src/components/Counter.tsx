@@ -1,11 +1,11 @@
 import React from 'react';
 
-type Props = {
+export type CounterProps = {
   number: number,
   onIncrease: () => void,
   onDecrease: () => void
 }
-const Counter = ({number, onIncrease, onDecrease}: Props) => {
+const Counter = ({number, onIncrease, onDecrease}: CounterProps) => {
   return (
     <div>
       <h1>{number}</h1>
