@@ -1,10 +1,10 @@
 type Type = 'todos/CHANGE_INPUT' | 'todos/INSERT' | 'todos/TOGGLE' | 'todos/REMOVE';
-type Todo = {
+export type Todo = {
   id: number,
   text: string,
   done: boolean
 }
-type State = {
+type TodosState = {
   input: any,
   todos: Todo[]
 }
@@ -37,7 +37,7 @@ export const remove = (id: number) => ({
   id
 });
 
-const initialState: State = {
+const initialState: TodosState = {
   input: '',
   todos: [
     {
