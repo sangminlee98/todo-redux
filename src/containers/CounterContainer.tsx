@@ -12,4 +12,4 @@ const CounterContainer = () => {
   return <Counter number={number} onIncrease={onIncrease} onDecrease={onDecrease}/>
 };
 
-export default CounterContainer
+export default React.memo(CounterContainer);
