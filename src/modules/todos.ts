@@ -5,16 +5,16 @@ export type Todo = {
   done: boolean
 }
 type TodosState = {
-  input: any,
+  input: string,
   todos: Todo[]
 }
-type Action = {type: Type, input?: any, todo?: Todo, id?: number};
+type Action = {type: Type, input?: string, todo?: Todo, id?: number};
 const CHANGE_INPUT: Type = 'todos/CHANGE_INPUT'; 
 const INSERT: Type = 'todos/INSERT';
 const TOGGLE: Type = 'todos/TOGGLE';
 const REMOVE: Type = 'todos/REMOVE';
 
-export const changeInput = (input: any) => ({
+export const changeInput = (input: string) => ({
   type: CHANGE_INPUT,
   input
 });
@@ -58,7 +58,7 @@ const todos = (state = initialState, action: Action) => {
     case CHANGE_INPUT:
       return {
         ...state,
-        input: action.input
+        input: action.input!
       }
     case INSERT:
       return {
